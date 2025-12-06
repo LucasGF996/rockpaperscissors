@@ -3,6 +3,7 @@ let computerChoice;
 let humanChoice;
 let humanScore = 0;
 let computerScore = 0;
+let round = 0;
 
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * pickOptions);
@@ -63,4 +64,10 @@ function playRound() {
                 console.log(`Not gonna do shit, this is default`);
         }
     }    
+}
+
+for (let i = 0; i < 5; i++) {
+    playRound();
+    round ++;
+    console.log(`Round number: ${round}`);
 }
